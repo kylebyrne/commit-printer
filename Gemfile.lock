@@ -2,6 +2,9 @@ GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.4.4)
+    nio4r (2.5.8)
+    puma (5.5.2)
+      nio4r (~> 2.0)
     rack (2.2.3)
     roda (3.50.0)
       rack
@@ -23,6 +26,7 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
+  puma
   roda
   rspec
 
