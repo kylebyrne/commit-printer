@@ -6,11 +6,11 @@ module GithubWebhookHelpers
     }
   end
 
-  def create_pull_request_params(merged: true)
+  def create_pull_request_params(merged: true, title: "Some title")
     {
       id: 800460692,
       number: 4,
-      title: "sdfsd",
+      title: title,
       user:  {
         login: "kylebyrne",
         avatar_url: "https://avatars.githubusercontent.com/u/5172770?v=4",
