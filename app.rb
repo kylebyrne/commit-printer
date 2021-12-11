@@ -8,6 +8,7 @@ class App < Roda
   route do |r|
     r.get "ping" do
       response.status = 200
+      opts[:logger].info("HEALTH CHECK")
       "We gucci"
     end
 
