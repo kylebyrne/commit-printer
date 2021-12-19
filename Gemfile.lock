@@ -6,6 +6,8 @@ GEM
     puma (5.5.2)
       nio4r (~> 2.0)
     rack (2.2.3)
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
     roda (3.50.0)
       rack
     rspec (3.10.0)
@@ -27,6 +29,7 @@ PLATFORMS
 
 DEPENDENCIES
   puma
+  rack-test
   roda
   rspec
 

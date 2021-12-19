@@ -8,5 +8,6 @@ gem "roda"
 gem "puma"
 
 group :test do
+  gem "rack-test"
   gem "rspec"
 end
