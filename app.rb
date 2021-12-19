@@ -1,9 +1,11 @@
 require "roda"
 require_relative "lib/webhook_event"
+require_relative "lib/printer"
 require 'logger'
 
 class App < Roda
   opts[:logger] = Logger.new(STDOUT)
+  opts[:printer] = Printer.new("/dev/serial0", 19200)
 
   route do |r|
     r.get "ping" do
@@ -20,6 +22,7 @@ class App < Roda
         response.status = 200
 
         opts[:logger].info(event.pull_request.to_s)
+        opts[:printer].print(event.pull_request.to_s)
         return
       end
 

@@ -17,7 +17,7 @@ RSpec.configure do |config|
   config.order = :random
 
   def app
-    App.freeze
+    App
   end
 
   Kernel.srand config.seed
